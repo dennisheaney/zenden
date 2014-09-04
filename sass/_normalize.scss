@@ -134,12 +134,17 @@ body {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
+a,
 a:link {
+  color: $zenden-link-color;
+  text-decoration: none;
 }
 a:visited {
+  color: $zenden-link-visited-color;
 }
 a:hover,
 a:focus {
+  color: $zenden-link-active-color;
 }
 a:active {
 }
@@ -303,7 +308,7 @@ menu,
 ol,
 ul {
   /* Address margins set differently in IE 6/7. */
-  margin: rhythm(1) 0;
+  margin: rhythm(0.5) 0;
 }
 ol,
 ul {
@@ -322,6 +327,10 @@ menu,
 ol,
 ul {
   padding: 0 0 0 $indent-amount; /* LTR */
+}
+
+li {
+  list-style: none;
 }
 
 @if $legacy-support-for-ie7 {

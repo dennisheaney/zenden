@@ -1,0 +1,115 @@
+body {
+  color: $zenden-secondary-color;
+  background-color: $zenden-primary-color;
+}
+
+#header {
+  @include zen-grid-item(4, 2);
+  color: $zenden-title-color;
+  padding: 10px 0px;
+}
+
+#main {
+  @include zen-clear();
+}
+
+#logo {
+  @include zen-grid-item(1, 0);
+  text-align: right;
+}
+
+#logo img {
+  padding-right: 20px;
+}
+
+#site-name {
+  padding-left: 10px;
+}
+
+article {
+  padding-bottom: 20px;
+}
+
+.block__title {
+  font-size: 1.2em;
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
+.region-sidebar-first {
+  text-align: right;
+  padding-right: 20px;
+}
+
+#block-system-main-menu {
+  font-size: 1.2em;
+  line-height: 1em;
+  text-align: right;
+}
+
+
+#block-system-main-menu .block__title {
+  display: none;
+}
+
+#block-system-main-menu ul.menu {
+  margin-top: 0px;
+}
+
+#block-system-main-menu ul.menu li {
+  list-style: none;
+  padding-bottom: 15px;
+}
+
+#block-node-recent,
+#block-node-recent table,
+#block-node-recent tbody {
+  margin-top: 5px;
+  border-color: none;
+  background-color: transparent;
+  line-height: 1em;
+}
+
+#block-node-recent table {
+  float: right;
+}
+
+#block-node-recent tr.even,
+#block-node-recent tr.odd {
+  background-color: transparent;
+  border: none; 
+}
+
+#block-node-recent .node-title {
+  font-size: 14px;
+  font-style: bold;
+}
+
+#block-node-recent .node-author {
+  font-size: 10px;
+  line-height: 2em;
+  font-style: italic;
+}
+
+.field-name-field-tags {
+  font-size: 0.8em;
+  line-height: 2em;
+  
+  .field-label {
+    font-style: italic;
+  }
+  
+  .field-label,
+  .field-items,
+  .field-items div {
+    display: inline;
+  }
+  
+  a {
+    font-weight: bold;
+  }
+}
+
+ul.links.inline {
+  line-height: 2em;
+}

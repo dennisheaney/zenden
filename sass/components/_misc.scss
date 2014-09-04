@@ -104,13 +104,11 @@
 .header__site-link {
   &:link,
   &:visited {
-    color: #000;
     text-decoration: none;
   }
 
   &:hover,
   &:focus {
-    text-decoration: underline;
   }
 }
 
@@ -499,8 +497,12 @@ span.field-label {
 }
 
 /* The active item in a Drupal menu. */
+.menu a {
+  padding-right: 5px;
+}
 .menu a.active {
-  color: #000;
+  color: #EEE;
+  border-right: solid 1px #EEE;
 }
 
 /**
