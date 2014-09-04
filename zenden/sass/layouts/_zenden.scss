@@ -13,6 +13,10 @@ body {
   @include zen-clear();
 }
 
+#page-title {
+  display:none;
+}
+
 #logo {
   @include zen-grid-item(1, 0);
   text-align: right;

@@ -898,6 +898,11 @@ body {
 }
 
 /* line 16, ../sass/layouts/_zenden.scss */
+#page-title {
+  display: none;
+}
+
+/* line 20, ../sass/layouts/_zenden.scss */
 #logo {
   float: left;
   width: 192px;
@@ -906,58 +911,58 @@ body {
   text-align: right;
 }
 
-/* line 21, ../sass/layouts/_zenden.scss */
+/* line 25, ../sass/layouts/_zenden.scss */
 #logo img {
   padding-right: 20px;
 }
 
-/* line 25, ../sass/layouts/_zenden.scss */
+/* line 29, ../sass/layouts/_zenden.scss */
 #site-name {
   padding-left: 10px;
 }
 
-/* line 29, ../sass/layouts/_zenden.scss */
+/* line 33, ../sass/layouts/_zenden.scss */
 article {
   padding-bottom: 20px;
 }
 
-/* line 33, ../sass/layouts/_zenden.scss */
+/* line 37, ../sass/layouts/_zenden.scss */
 .block__title {
   font-size: 1.2em;
   font-style: italic;
   padding-bottom: 5px;
 }
 
-/* line 39, ../sass/layouts/_zenden.scss */
+/* line 43, ../sass/layouts/_zenden.scss */
 .region-sidebar-first {
   text-align: right;
   padding-right: 20px;
 }
 
-/* line 44, ../sass/layouts/_zenden.scss */
+/* line 48, ../sass/layouts/_zenden.scss */
 #block-system-main-menu {
   font-size: 1.2em;
   line-height: 1em;
   text-align: right;
 }
 
-/* line 51, ../sass/layouts/_zenden.scss */
+/* line 55, ../sass/layouts/_zenden.scss */
 #block-system-main-menu .block__title {
   display: none;
 }
 
-/* line 55, ../sass/layouts/_zenden.scss */
+/* line 59, ../sass/layouts/_zenden.scss */
 #block-system-main-menu ul.menu {
   margin-top: 0px;
 }
 
-/* line 59, ../sass/layouts/_zenden.scss */
+/* line 63, ../sass/layouts/_zenden.scss */
 #block-system-main-menu ul.menu li {
   list-style: none;
   padding-bottom: 15px;
 }
 
-/* line 64, ../sass/layouts/_zenden.scss */
+/* line 68, ../sass/layouts/_zenden.scss */
 #block-node-recent,
 #block-node-recent table,
 #block-node-recent tbody {
@@ -967,52 +972,52 @@ article {
   line-height: 1em;
 }
 
-/* line 73, ../sass/layouts/_zenden.scss */
+/* line 77, ../sass/layouts/_zenden.scss */
 #block-node-recent table {
   float: right;
 }
 
-/* line 77, ../sass/layouts/_zenden.scss */
+/* line 81, ../sass/layouts/_zenden.scss */
 #block-node-recent tr.even,
 #block-node-recent tr.odd {
   background-color: transparent;
   border: none;
 }
 
-/* line 83, ../sass/layouts/_zenden.scss */
+/* line 87, ../sass/layouts/_zenden.scss */
 #block-node-recent .node-title {
   font-size: 14px;
   font-style: bold;
 }
 
-/* line 88, ../sass/layouts/_zenden.scss */
+/* line 92, ../sass/layouts/_zenden.scss */
 #block-node-recent .node-author {
   font-size: 10px;
   line-height: 2em;
   font-style: italic;
 }
 
-/* line 94, ../sass/layouts/_zenden.scss */
+/* line 98, ../sass/layouts/_zenden.scss */
 .field-name-field-tags {
   font-size: 0.8em;
   line-height: 2em;
 }
-/* line 98, ../sass/layouts/_zenden.scss */
+/* line 102, ../sass/layouts/_zenden.scss */
 .field-name-field-tags .field-label {
   font-style: italic;
 }
-/* line 102, ../sass/layouts/_zenden.scss */
+/* line 106, ../sass/layouts/_zenden.scss */
 .field-name-field-tags .field-label,
 .field-name-field-tags .field-items,
 .field-name-field-tags .field-items div {
   display: inline;
 }
-/* line 108, ../sass/layouts/_zenden.scss */
+/* line 112, ../sass/layouts/_zenden.scss */
 .field-name-field-tags a {
   font-weight: bold;
 }
 
-/* line 113, ../sass/layouts/_zenden.scss */
+/* line 117, ../sass/layouts/_zenden.scss */
 ul.links.inline {
   line-height: 2em;
 }
