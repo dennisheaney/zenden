@@ -19,7 +19,7 @@ $zen-grid-width:  192px;
 
 // You can generate more efficient CSS if you manually apply the
 // zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
+$zen-auto-include-item-base: true;
 // $zen-auto-include-flow-item-base: false;
 
 // Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
@@ -56,6 +56,12 @@ $zen-auto-include-item-base: false;
   @include zen-grid-container();
 }
 
+#logo {
+  text-align: right; 
+  float: left; 
+  margin-left: -62px;
+}
+
 /* Navigation bar */
 @media all and (min-width: 480px) {
   #main {
@@ -69,6 +75,10 @@ $zen-auto-include-item-base: false;
     top: 0;
     height: $nav-height;
     width: $zen-grid-width;
+  }
+
+  #header {
+    @include zen-grid-item(1, 1);
   }
 }
 
@@ -86,6 +96,10 @@ $zen-auto-include-item-base: false;
    * The layout when there is only one sidebar, the left one.
    */
   .sidebar-first {
+    #header {
+      @include zen-grid-item(2, 2);
+    }
+    
     /* Span 2 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(2, 2);
@@ -164,6 +178,11 @@ $zen-auto-include-item-base: false;
    * The layout when there is only one sidebar, the left one.
    */
   .sidebar-first {
+
+    #header {
+      @include zen-grid-item(4, 2);
+    }
+    
     /* Span 4 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(4, 2);

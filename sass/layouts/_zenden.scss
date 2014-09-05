@@ -4,7 +4,6 @@ body {
 }
 
 #header {
-  @include zen-grid-item(4, 2);
   color: $zenden-title-color;
   padding: 10px 0px;
 }
@@ -18,8 +17,7 @@ body {
 }
 
 #logo {
-  @include zen-grid-item(1, 0);
-  text-align: right;
+  xtext-align: right;
 }
 
 #logo img {
