@@ -171,8 +171,7 @@ a:hover {
  */
 
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-p,
-pre {
+p {
   margin: rhythm(1) 0;
 }
 blockquote {
@@ -250,9 +249,8 @@ mark {
 }
 
 /* Correct font family set oddly in Safari 5 and Chrome. */
-code,
+
 kbd,
-pre,
 samp,
 tt,
 var {
@@ -265,14 +263,6 @@ var {
 
 /* Improve readability of pre-formatted text in all browsers. */
 pre {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  @else {
-    white-space: pre-wrap;
-  }
 }
 
 /* Set consistent quote types. */
@@ -329,9 +319,6 @@ ul {
   padding: 0 0 0 $indent-amount; /* LTR */
 }
 
-li {
-  list-style: none;
-}
 
 @if $legacy-support-for-ie7 {
   /* Correct list images handled incorrectly in IE 7. */
