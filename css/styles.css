@@ -1512,13 +1512,14 @@ article {
 .field-name-field-tags .field-items,
 .field-name-field-tags .field-items div {
   display: inline;
+  margin-right: 4px;
 }
-/* line 121, ../sass/layouts/_zenden.scss */
+/* line 122, ../sass/layouts/_zenden.scss */
 .field-name-field-tags a {
   font-weight: bold;
 }
 
-/* line 126, ../sass/layouts/_zenden.scss */
+/* line 127, ../sass/layouts/_zenden.scss */
 ul.links.inline {
   line-height: 2em;
 }
