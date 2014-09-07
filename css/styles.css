@@ -488,16 +488,22 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
   cursor: pointer;
   /* 3 */
+}
+
+/* line 460, ../sass/_normalize.scss */
+input[type="text"],
+textarea {
+  border: 1px solid #BBB;
+  background-color: #272B2E;
+  color: #BBB;
 }
 
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 467, ../sass/_normalize.scss */
+/* line 470, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -509,7 +515,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 478, ../sass/_normalize.scss */
+/* line 481, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   -moz-box-sizing: border-box;
@@ -525,7 +531,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 493, ../sass/_normalize.scss */
+/* line 496, ../sass/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -539,14 +545,14 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 502, ../sass/_normalize.scss */
+/* line 505, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 508, ../sass/_normalize.scss */
+/* line 511, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -557,7 +563,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 518, ../sass/_normalize.scss */
+/* line 521, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -566,16 +572,17 @@ textarea {
 }
 
 /* Drupal-style form labels. */
-/* line 524, ../sass/_normalize.scss */
+/* line 527, ../sass/_normalize.scss */
 label {
   display: block;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 /**
  * Tables
  */
-/* line 532, ../sass/_normalize.scss */
+/* line 536, ../sass/_normalize.scss */
 table {
   /* Remove most spacing between table cells. */
   border-collapse: collapse;
@@ -1428,42 +1435,82 @@ article {
 }
 
 /* line 46, ../sass/layouts/_zenden.scss */
+.node-unpublished {
+  background-color: transparent;
+}
+
+/* line 50, ../sass/layouts/_zenden.scss */
+.filter-wrapper {
+  border: none;
+}
+
+/* line 54, ../sass/layouts/_zenden.scss */
+mark.new {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.6em;
+}
+
+/* line 60, ../sass/layouts/_zenden.scss */
+mark.updated {
+  float: right;
+  clear: right;
+  width: 10px;
+  height: 10px;
+  font-size: 1px;
+  background: transparent;
+  color: #272B2E;
+}
+/* line 69, ../sass/layouts/_zenden.scss */
+mark.updated:before {
+  float: right;
+  color: #fff;
+  content: '*';
+  font-size: 10px;
+}
+
+/* line 77, ../sass/layouts/_zenden.scss */
+*:after + mark.updated {
+  content: '*';
+}
+
+/* line 81, ../sass/layouts/_zenden.scss */
 .block__title {
   font-size: 1.2em;
   font-style: italic;
   padding-bottom: 5px;
 }
 
-/* line 52, ../sass/layouts/_zenden.scss */
+/* line 87, ../sass/layouts/_zenden.scss */
 .region-sidebar-first {
   text-align: right;
   padding-right: 20px;
 }
 
-/* line 57, ../sass/layouts/_zenden.scss */
+/* line 92, ../sass/layouts/_zenden.scss */
 #block-system-main-menu {
   font-size: 1.2em;
   line-height: 1em;
   text-align: right;
 }
 
-/* line 64, ../sass/layouts/_zenden.scss */
+/* line 99, ../sass/layouts/_zenden.scss */
 #block-system-main-menu .block__title {
   display: none;
 }
 
-/* line 68, ../sass/layouts/_zenden.scss */
+/* line 103, ../sass/layouts/_zenden.scss */
 #block-system-main-menu ul.menu {
   margin-top: 0px;
 }
 
-/* line 72, ../sass/layouts/_zenden.scss */
+/* line 107, ../sass/layouts/_zenden.scss */
 #block-system-main-menu ul.menu li {
   list-style: none;
   padding-bottom: 15px;
 }
 
-/* line 77, ../sass/layouts/_zenden.scss */
+/* line 112, ../sass/layouts/_zenden.scss */
 #block-node-recent,
 #block-node-recent table,
 #block-node-recent tbody {
@@ -1473,53 +1520,73 @@ article {
   line-height: 1em;
 }
 
-/* line 86, ../sass/layouts/_zenden.scss */
+/* line 121, ../sass/layouts/_zenden.scss */
 #block-node-recent table {
   float: right;
 }
 
-/* line 90, ../sass/layouts/_zenden.scss */
+/* line 125, ../sass/layouts/_zenden.scss */
 #block-node-recent tr.even,
 #block-node-recent tr.odd {
   background-color: transparent;
   border: none;
 }
+/* line 130, ../sass/layouts/_zenden.scss */
+#block-node-recent tr.even td,
+#block-node-recent tr.odd td {
+  float: right;
+}
+/* line 133, ../sass/layouts/_zenden.scss */
+#block-node-recent tr.even td.title-author,
+#block-node-recent tr.odd td.title-author {
+  width: 100%;
+}
+/* line 137, ../sass/layouts/_zenden.scss */
+#block-node-recent tr.even td.edit, #block-node-recent tr.even td.delete,
+#block-node-recent tr.odd td.edit,
+#block-node-recent tr.odd td.delete {
+  margin-left: 5px;
+  display: inline;
+  font-size: 10px;
+  line-height: 2em;
+  font-style: italic;
+}
 
-/* line 96, ../sass/layouts/_zenden.scss */
+/* line 147, ../sass/layouts/_zenden.scss */
 #block-node-recent .node-title {
   font-size: 14px;
   font-style: bold;
 }
 
-/* line 101, ../sass/layouts/_zenden.scss */
+/* line 152, ../sass/layouts/_zenden.scss */
 #block-node-recent .node-author {
   font-size: 10px;
   line-height: 2em;
   font-style: italic;
 }
 
-/* line 107, ../sass/layouts/_zenden.scss */
+/* line 158, ../sass/layouts/_zenden.scss */
 .field-name-field-tags {
   font-size: 0.8em;
   line-height: 2em;
 }
-/* line 111, ../sass/layouts/_zenden.scss */
+/* line 162, ../sass/layouts/_zenden.scss */
 .field-name-field-tags .field-label {
   font-style: italic;
 }
-/* line 115, ../sass/layouts/_zenden.scss */
+/* line 166, ../sass/layouts/_zenden.scss */
 .field-name-field-tags .field-label,
 .field-name-field-tags .field-items,
 .field-name-field-tags .field-items div {
   display: inline;
   margin-right: 4px;
 }
-/* line 122, ../sass/layouts/_zenden.scss */
+/* line 173, ../sass/layouts/_zenden.scss */
 .field-name-field-tags a {
   font-weight: bold;
 }
 
-/* line 127, ../sass/layouts/_zenden.scss */
+/* line 178, ../sass/layouts/_zenden.scss */
 ul.links.inline {
   line-height: 2em;
 }
@@ -1787,21 +1854,14 @@ ul.links.inline {
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
   *zoom: 1;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYmJiYmJiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(bottom, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
-  background-image: -webkit-linear-gradient(bottom, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
-  background-image: linear-gradient(to top, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
-  border-bottom: 1px solid #BBB \0/ie;
   margin: 1.28571em 0;
   padding: 0 2px;
   white-space: nowrap;
 }
 
-/* line 273, ../sass/components/_misc.scss */
+/* line 271, ../sass/components/_misc.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   float: left;
@@ -1809,18 +1869,15 @@ ul.links.inline {
   margin: 0 3px;
 }
 
-/* line 277, ../sass/components/_misc.scss */
+/* line 275, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
-  border: 1px solid #e9e9e9;
-  border-right: 0;
-  border-bottom: 0;
   display: block;
   line-height: 1.28571em;
   text-decoration: none;
 }
 
 /* Primary tabs. */
-/* line 290, ../sass/components/_misc.scss */
+/* line 285, ../sass/components/_misc.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -1828,19 +1885,16 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  text-shadow: 1px 1px 0 #fff;
-  border: 1px solid #BBB;
-  border-bottom-color: transparent;
-  /* IE 9 and earlier don't understand gradients. */
-  border-bottom: 0 \0/ie;
+  margin: 5px 10px;
+  padding-bottom: 5px;
 }
 
-/* line 299, ../sass/components/_misc.scss */
+/* line 292, ../sass/components/_misc.scss */
 .tabs-primary__tab.is-active {
-  border-bottom-color: #272B2E;
+  border-bottom: 2px dashed #BBB;
 }
 
-/* line 305, ../sass/components/_misc.scss */
+/* line 298, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -1848,52 +1902,36 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  color: #333;
-  background-color: #dedede;
   letter-spacing: 1px;
   padding: 0 1em;
   text-align: center;
 }
 
-/* line 315, ../sass/components/_misc.scss */
+/* line 305, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
-  background-color: #e9e9e9;
-  border-color: #f2f2f2;
+  background: transparent;
 }
 
-/* line 319, ../sass/components/_misc.scss */
+/* line 308, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
-  background-color: transparent;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
-  background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  border-color: #fff;
+  background: transparent;
 }
 
 /* Secondary tabs. */
-/* line 343, ../sass/components/_misc.scss */
+/* line 329, ../sass/components/_misc.scss */
 .tabs-secondary {
   font-size: .9em;
   /* Collapse bottom margin of ul.primary. */
   margin-top: -1.28571em;
 }
 
-/* line 349, ../sass/components/_misc.scss */
+/* line 335, ../sass/components/_misc.scss */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 0.64286em 3px;
 }
 
-/* line 356, ../sass/components/_misc.scss */
+/* line 342, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   -moz-border-radius: 0.75em;
   -webkit-border-radius: 0.75em;
@@ -1908,14 +1946,14 @@ a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   padding: 0 .5em;
 }
 
-/* line 365, ../sass/components/_misc.scss */
+/* line 351, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
   background-color: #dedede;
   border-color: #999;
   color: #333;
 }
 
-/* line 370, ../sass/components/_misc.scss */
+/* line 356, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   text-shadow: 1px 1px 0 #333;
   background-color: #666;
@@ -1927,12 +1965,12 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
  * Inline styles.
  */
 /* List of links generated by theme_links(). */
-/* line 398, ../sass/components/_misc.scss */
+/* line 384, ../sass/components/_misc.scss */
 .inline {
   display: inline;
   padding: 0;
 }
-/* line 402, ../sass/components/_misc.scss */
+/* line 388, ../sass/components/_misc.scss */
 .inline li {
   display: inline;
   list-style-type: none;
@@ -1941,7 +1979,7 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
 }
 
 /* The inline field label used by the Fences module. */
-/* line 410, ../sass/components/_misc.scss */
+/* line 396, ../sass/components/_misc.scss */
 span.field-label {
   padding: 0 1em 0 0;
   /* LTR */
@@ -1950,19 +1988,19 @@ span.field-label {
 /**
  * "More" links.
  */
-/* line 417, ../sass/components/_misc.scss */
+/* line 403, ../sass/components/_misc.scss */
 .more-link {
   text-align: right;
   /* LTR */
 }
 
-/* line 420, ../sass/components/_misc.scss */
+/* line 406, ../sass/components/_misc.scss */
 .more-help-link {
   text-align: right;
   /* LTR */
 }
 
-/* line 423, ../sass/components/_misc.scss */
+/* line 409, ../sass/components/_misc.scss */
 .more-help-link a {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR42qWTPQqDQBCFcwSPkCNITpAj5AjeIm1uYpkyR7Cy2Mot7OwsBAsRwUKwmOwLGRle3EIy8PyBfZ/z3J2TiPylz8VWWZZpUB40BonRKyizaxkA88MYYiqCEgv4MTvnZJom0VqWRbz3FlJZgLYtqmEY1Lg9r+sKsIXcLSC3AC019H0vqLquLeC5AfiHYSGkcdAJimKIBQiJ4+CO92OAtm0FNc8zOjkMwE5Q63FAtbeg6zpAYvG8BWR7i5qmQYwY4MIHqYhE2DOPQWcGJBQF2XU72ZzyUeZ5GCNt5/hybJgYdAXsq5sOEE/jG6dC5IOqCXTmAAAAAElFTkSuQmCC');
   background-position: 0 50%;
@@ -1976,14 +2014,14 @@ span.field-label {
  * Pager.
  */
 /* A list of page numbers when more than 1 page of content is available. */
-/* line 438, ../sass/components/_misc.scss */
+/* line 424, ../sass/components/_misc.scss */
 .pager {
   clear: both;
   padding: 0;
   text-align: center;
 }
 
-/* line 443, ../sass/components/_misc.scss */
+/* line 429, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1996,7 +2034,7 @@ span.field-label {
   background-image: none;
 }
 
-/* line 450, ../sass/components/_misc.scss */
+/* line 436, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -2007,7 +2045,7 @@ span.field-label {
 }
 
 /* The current page's list item. */
-/* line 460, ../sass/components/_misc.scss */
+/* line 446, ../sass/components/_misc.scss */
 .pager-current {
   font-weight: bold;
 }
@@ -2016,7 +2054,7 @@ span.field-label {
  * Blocks.
  */
 /* Block wrapper. */
-/* line 470, ../sass/components/_misc.scss */
+/* line 456, ../sass/components/_misc.scss */
 .block {
   margin-bottom: 1.28571em;
 }
@@ -2024,19 +2062,19 @@ span.field-label {
 /**
  * Menus.
  */
-/* line 477, ../sass/components/_misc.scss */
+/* line 463, ../sass/components/_misc.scss */
 .menu__item.is-leaf {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAAD1BMVEX///+/v7+Li4sAAADAwMBFvsw8AAAAAXRSTlMAQObYZgAAAB1JREFUCFtjYAADYwMGBmYVZSDhKAwkFJWhYiAAAB2+Aa/9ugeaAAAAAElFTkSuQmCC');
   list-style-type: square;
 }
 
-/* line 484, ../sass/components/_misc.scss */
+/* line 470, ../sass/components/_misc.scss */
 .menu__item.is-expanded {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   list-style-type: circle;
 }
 
-/* line 491, ../sass/components/_misc.scss */
+/* line 477, ../sass/components/_misc.scss */
 .menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
@@ -2044,12 +2082,12 @@ span.field-label {
 }
 
 /* The active item in a Drupal menu. */
-/* line 500, ../sass/components/_misc.scss */
+/* line 486, ../sass/components/_misc.scss */
 .menu a {
   padding-right: 5px;
 }
 
-/* line 503, ../sass/components/_misc.scss */
+/* line 489, ../sass/components/_misc.scss */
 .menu a.active {
   color: #EEE;
   border-right: solid 1px #EEE;
@@ -2059,7 +2097,7 @@ span.field-label {
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 513, ../sass/components/_misc.scss */
+/* line 499, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -2071,7 +2109,7 @@ span.field-label {
  * Unpublished note.
  */
 /* The word "Unpublished" displayed underneath the content. */
-/* line 525, ../sass/components/_misc.scss */
+/* line 511, ../sass/components/_misc.scss */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -2092,31 +2130,31 @@ span.field-label {
  * Comments.
  */
 /* Wrapper for the list of comments and its title. */
-/* line 553, ../sass/components/_misc.scss */
+/* line 539, ../sass/components/_misc.scss */
 .comments {
   margin: 1.28571em 0;
 }
 
 /* Preview of the comment before submitting new or updated comment. */
-/* line 558, ../sass/components/_misc.scss */
+/* line 544, ../sass/components/_misc.scss */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
 }
 
 /* Wrapper for a single comment. */
-/* line 564, ../sass/components/_misc.scss */
+/* line 550, ../sass/components/_misc.scss */
 .comment {
   /* Comment's permalink wrapper. */
 }
-/* line 567, ../sass/components/_misc.scss */
+/* line 553, ../sass/components/_misc.scss */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
 /* Nested comments are indented. */
-/* line 574, ../sass/components/_misc.scss */
+/* line 560, ../sass/components/_misc.scss */
 .indented {
   /* Drupal core uses a 25px left margin. */
   margin-left: 30px;
@@ -2127,7 +2165,7 @@ span.field-label {
  * Forms.
  */
 /* Wrapper for a form element (or group of form elements) and its label. */
-/* line 584, ../sass/components/_misc.scss */
+/* line 570, ../sass/components/_misc.scss */
 .form-item {
   margin: 1.28571em 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
@@ -2135,61 +2173,61 @@ span.field-label {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 588, ../sass/components/_misc.scss */
+/* line 574, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 595, ../sass/components/_misc.scss */
+/* line 581, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 601, ../sass/components/_misc.scss */
+/* line 587, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #c00;
 }
-/* line 608, ../sass/components/_misc.scss */
+/* line 594, ../sass/components/_misc.scss */
 .form-item .description {
   font-size: 0.85em;
 }
 
-/* line 615, ../sass/components/_misc.scss */
+/* line 601, ../sass/components/_misc.scss */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.4em;
 }
 
 /* The part of the label that indicates a required field. */
-/* line 621, ../sass/components/_misc.scss */
+/* line 607, ../sass/components/_misc.scss */
 .form-required {
   color: #c00;
 }
 
 /* Labels for radios and checkboxes. */
-/* line 626, ../sass/components/_misc.scss */
+/* line 612, ../sass/components/_misc.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
 /* Buttons used by contrib modules like Media. */
-/* line 632, ../sass/components/_misc.scss */
+/* line 618, ../sass/components/_misc.scss */
 a.button {
   -moz-appearance: button;
   -webkit-appearance: button;
 }
 
 /* Password confirmation. */
-/* line 637, ../sass/components/_misc.scss */
+/* line 623, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
 /* Drupal's default login form block. */
-/* line 643, ../sass/components/_misc.scss */
+/* line 629, ../sass/components/_misc.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -2202,20 +2240,20 @@ a.button {
  * styling of list items.
  */
 /* OpenID creates a new ul above the login form's links. */
-/* line 655, ../sass/components/_misc.scss */
+/* line 641, ../sass/components/_misc.scss */
 .openid-links {
   /* Position OpenID's ul next to the rest of the links. */
   margin-bottom: 0;
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 661, ../sass/components/_misc.scss */
+/* line 647, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.28571em;
 }
 
-/* line 665, ../sass/components/_misc.scss */
+/* line 651, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -2223,7 +2261,7 @@ html.js #user-login-form li.openid-link,
   /* LTR */
 }
 
-/* line 670, ../sass/components/_misc.scss */
+/* line 656, ../sass/components/_misc.scss */
 #user-login ul {
   margin: 1.28571em 0;
 }
@@ -2231,7 +2269,7 @@ html.js #user-login-form li.openid-link,
 /**
  * Drupal admin tables.
  */
-/* line 678, ../sass/components/_misc.scss */
+/* line 664, ../sass/components/_misc.scss */
 form th {
   text-align: left;
   /* LTR */
@@ -2239,16 +2277,16 @@ form th {
   /* LTR */
   border-bottom: 3px solid #ccc;
 }
-/* line 683, ../sass/components/_misc.scss */
+/* line 669, ../sass/components/_misc.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 686, ../sass/components/_misc.scss */
+/* line 672, ../sass/components/_misc.scss */
 form table ul {
   margin: 0;
 }
 
-/* line 690, ../sass/components/_misc.scss */
+/* line 676, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -2256,26 +2294,26 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 696, ../sass/components/_misc.scss */
+/* line 682, ../sass/components/_misc.scss */
 tr.even {
   background-color: #fff;
 }
 
 /* Markup generated by theme_tablesort_indicator(). */
-/* line 711, ../sass/components/_misc.scss */
+/* line 697, ../sass/components/_misc.scss */
 td.active {
   background-color: #ddd;
 }
 
 /* Center checkboxes inside table cell. */
-/* line 716, ../sass/components/_misc.scss */
+/* line 702, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
 /* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
-/* line 722, ../sass/components/_misc.scss */
+/* line 708, ../sass/components/_misc.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -2286,7 +2324,7 @@ td.menu-disabled {
  * @see autocomplete.js
  */
 /* Suggestion list. */
-/* line 733, ../sass/components/_misc.scss */
+/* line 719, ../sass/components/_misc.scss */
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -2297,7 +2335,7 @@ td.menu-disabled {
  *
  * @see collapse.js
  */
-/* line 744, ../sass/components/_misc.scss */
+/* line 730, ../sass/components/_misc.scss */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
@@ -2306,14 +2344,14 @@ html.js .collapsible .fieldset-legend {
   padding-left: 15px;
   /* LTR */
 }
-/* line 753, ../sass/components/_misc.scss */
+/* line 739, ../sass/components/_misc.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
   background-position: 5px 50%;
   /* LTR */
 }
-/* line 760, ../sass/components/_misc.scss */
+/* line 746, ../sass/components/_misc.scss */
 .fieldset-legend .summary {
   color: #999;
   font-size: 0.9em;
@@ -2325,17 +2363,17 @@ html.js .collapsed .fieldset-legend {
  *
  * @see tabledrag.js
  */
-/* line 772, ../sass/components/_misc.scss */
+/* line 758, ../sass/components/_misc.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 775, ../sass/components/_misc.scss */
+/* line 761, ../sass/components/_misc.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 778, ../sass/components/_misc.scss */
+/* line 764, ../sass/components/_misc.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
@@ -2345,7 +2383,7 @@ tr.drag-previous {
  *
  * @see tableselect.js
  */
-/* line 787, ../sass/components/_misc.scss */
+/* line 773, ../sass/components/_misc.scss */
 tr.selected td {
   background: #ffc;
 }
@@ -2355,11 +2393,11 @@ tr.selected td {
  *
  * @see progress.js
  */
-/* line 796, ../sass/components/_misc.scss */
+/* line 782, ../sass/components/_misc.scss */
 .progress {
   font-weight: bold;
 }
-/* line 799, ../sass/components/_misc.scss */
+/* line 785, ../sass/components/_misc.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -2368,7 +2406,7 @@ tr.selected td {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 805, ../sass/components/_misc.scss */
+/* line 791, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
   background-image: url('../images/progress.gif?1409596927');

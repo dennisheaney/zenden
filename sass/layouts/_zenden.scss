@@ -43,6 +43,41 @@ article {
   padding-bottom: 20px;
 }
 
+.node-unpublished {
+  background-color: transparent;
+}
+
+.filter-wrapper {
+  border: none;
+}
+
+mark.new {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.6em;
+}
+
+mark.updated {
+  float: right;
+  clear: right;
+  width: 10px;
+  height: 10px;
+  font-size: 1px;
+  background: transparent;
+  color: $zenden-primary-color;
+  
+  &:before {
+    float: right;
+    color: #fff;
+    content: '*';
+    font-size: 10px;
+  }
+}
+
+*:after + mark.updated {
+  content: '*';
+}
+
 .block__title {
   font-size: 1.2em;
   font-style: italic;
@@ -91,6 +126,22 @@ article {
 #block-node-recent tr.odd {
   background-color: transparent;
   border: none; 
+  
+  td {
+    float: right;
+    
+    &.title-author {
+      width: 100%;
+    }
+    
+    &.edit, &.delete {
+      margin-left: 5px;
+      display: inline;
+      font-size: 10px;
+      line-height: 2em;
+      font-style: italic;
+    }
+  }
 }
 
 #block-node-recent .node-title {

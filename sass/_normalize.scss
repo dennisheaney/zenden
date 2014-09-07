@@ -454,11 +454,14 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  @if $legacy-support-for-ie7 {
-    *overflow: visible; /* 4 */
-  }
+}
+
+input[type="text"],
+textarea {
+  border: 1px solid $zenden-secondary-color;
+  background-color: $zenden-primary-color;
+  color: $zenden-secondary-color;
 }
 
 /**
@@ -524,6 +527,7 @@ textarea {
 label {
   display: block;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 /**
