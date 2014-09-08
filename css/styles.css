@@ -1412,7 +1412,7 @@ blockquote p {
 
 /* line 26, ../sass/layouts/_zenden.scss */
 #page-title {
-  display: none;
+  xdisplay: none;
 }
 
 /* line 30, ../sass/layouts/_zenden.scss */
